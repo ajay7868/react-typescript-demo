@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Greet } from './Greet'
+import { Person } from './Person'
+import { PersonList } from './PersonList'
 
 function App() {
+  const personName = {
+    fName: 'John',
+    lName: ' Smith'
+  }
+  const nameList = [
+    {
+      fName: 'John',
+      lName: ' Smith'
+    },
+    {
+      fName: 'John',
+      lName: ' Smith'
+    },
+    {
+      fName: 'John',
+      lName: ' Smith'
+    }
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greet name="Ajay" messageCount={20} isLoggedIn={true}></Greet>
+      <Person name={personName}></Person>
+      <PersonList name={nameList} />
+
     </div>
-  );
+  )
+    
+
 }
 
 export default App;
